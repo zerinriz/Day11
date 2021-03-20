@@ -1,13 +1,13 @@
-function multipleArrayFunction(myArray) {
+function multiplyArrayFunction(myArray) {
     var MyNewArray = [...myArray];
     var arr = [];
     var product = 1;
     var sum = 0;
 
-    for (i = 0; i < MyNewArray.length; i++) {
-        for (j = 0; j < MyNewArray[i].length; j++) {
-            sum = sum + MyNewArray[i][j];
-            product = product * MyNewArray[i][j];
+    for (var i = 0; i < MyNewArray.length; i++) {
+        for (var j = 0; j < MyNewArray[i].length; j++) {
+            sum += MyNewArray[i][j];
+            product *= MyNewArray[i][j];
         }
     }
 
@@ -17,7 +17,8 @@ function multipleArrayFunction(myArray) {
     return arr;
 }
 
-console.log(multipleArrayFunction([[2], [5, 6, 7], [8, 9]]));
-console.log(multipleArrayFunction([[2.5, 2], [0.5, 0.2], [8]]));
-console.log(multipleArrayFunction([[1, 2], [3, 4, 5, 6], [7, 8, 9]]));
+console.log(multiplyArrayFunction([[2], [5, 6, 7], [8, 9]]));
+console.log(multiplyArrayFunction([[2.5, 2], [0.5, 0.2], [8]]));
+console.log(multiplyArrayFunction([[1, 2], [3, 4, 5, 6], [7, 8, 9]]));
+
 module.exports = multipleArrayFunction;

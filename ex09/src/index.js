@@ -1,8 +1,6 @@
 function myBouncer(arr) {
 
-    var myNewArray = [...arr];
-
-    return myNewArray.filter(Boolean);
+    return [...arr].filter(Boolean);
 }
 
 console.log(myBouncer([7, "ate", "", false, 9]));

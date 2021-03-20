@@ -4,16 +4,14 @@ function myArrayFunction(myPets) {
     var myNewPets = [...myPets];
 
     myNewPets.push("Bird", "Fish");
-    var firstPet = myNewPets[0];
-    var lastPet = myNewPets[myNewPets.length - 1];
 
+    var firstPet = myNewPets.pop();
+    var lastPet = myNewPets.shift();
 
-    myNewPets.pop();
-    myNewPets.shift();
     myNewPets.unshift("Lion");
 
 
-    return myNewPets
+    return myNewPets;
 }
 console.log(myArrayFunction(myPetsArray));
 module.exports = myArrayFunction;
